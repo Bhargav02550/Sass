@@ -1,0 +1,60 @@
+.conatainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // min-height: 100vh;
+    background-color: rgb(134, 131, 131);
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin green-button{
+    background-color: green;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@mixin input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: gray solid 1px;
+    font-family: Arial;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    &:focus{
+        color: green;
+    }
+}
+
+.green-button{
+    @include green-button;
+}
+
+.in{
+    @include input;
+}
+
+.middle{
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border: grey solid 1px;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
+    @include center;
+}
