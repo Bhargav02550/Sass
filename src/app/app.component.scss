@@ -58,3 +58,10 @@
     align-items: center;
     @include center;
 }
+
+.text{
+    text-align: center;
+    font-family: Arial;
+    font-size: 30px;
+    color: green;
+}
